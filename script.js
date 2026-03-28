@@ -139,13 +139,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const typingTarget = document.getElementById('typingTarget');
   if (typingTarget) {
     const phrases = [
+      'data analytics pipelines',
       'embedded firmware',
+      'interactive dashboards',
       'FPGA systems',
-      'robotic middleware',
       'full-stack platforms',
-      'AI-powered tools',
-      'PCB circuits',
+      'ML models',
       'real-time systems',
+      'PCB circuits',
     ];
 
     let phraseIndex = 0;
