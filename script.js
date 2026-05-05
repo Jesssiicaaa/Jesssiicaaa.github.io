@@ -278,4 +278,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  /* ────────────────────────────────────────
+     8. IMAGE CAROUSELS
+     Each [data-carousel] element gets its
+     own independent prev/next/dot controls
+     and auto-advances every 3.5 seconds
+  ──────────────────────────────────────── */
+  document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    const dots  = carousel.querySelectorAll('.carousel-dot');
+    const prev  = carousel.querySelector('.carousel-prev');
+    const next  = carousel.querySelector('.carousel-next');
+    const total = carousel.querySelectorAll('.carousel-img').length;
+    let current = 0;
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    prev && prev.addEventListener('click', () => goTo(current - 1));
+    next && next.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+    // Auto-advance, pause on hover
+    let timer = setInterval(() => goTo(current + 1), 3500);
+    carousel.addEventListener('mouseenter', () => clearInterval(timer));
+    carousel.addEventListener('mouseleave', () => {
+      timer = setInterval(() => goTo(current + 1), 3500);
+    });
+  });
+
+
+  /* ────────────────────────────────────────
+     9. LAZY IMAGE FADE-IN
+     Fades images in once loaded instead of
+     snapping in abruptly
+  ──────────────────────────────────────── */
+  document.querySelectorAll('.card-img, .carousel-img').forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+
 });
