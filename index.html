@@ -16,7 +16,7 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- ── NAVIGATION ── -->
+  <!-- ── NAVIGATION ── -->bbbbbbb
   <nav>
     <div class="nav-logo">MY<span>_</span>PORTFOLIO</div>
     <ul class="nav-links">
@@ -53,10 +53,10 @@
       </div>
     </div>
 
-    <!-- PHOTO: uncomment <img> and replace YOUR_PHOTO_URL with your image path -->
+    <!-- PHOTO: replace YOUR_PHOTO_URL with your image path -->
     <div class="hero-photo-wrap">
       <div class="angled-photo">
-        <img src="Headshot.jpg" alt="Profile photo" /> 
+        <img src="Pictures/Headshot.jpg" alt="Profile photo" /> 
         <div class="photo-placeholder">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
             <circle cx="12" cy="8" r="4"/>
@@ -86,7 +86,7 @@
         <div class="about-text reveal reveal-delay-2">
           <p>I'm a <strong>Computer Engineering student</strong> at Toronto Metropolitan University with a strong interest in <strong>data analytics</strong> — turning raw data into decisions through visualization, modelling, and systems that make information actionable.</p>
           <p>My background spans embedded firmware, FPGA design, full-stack development, and machine learning, which means I bring a systems-level perspective to data problems. I understand not just the numbers, but the hardware and software that generate them.</p>
-          <p>Outside the lab, I contribute to <strong>NSBE</strong>, explore robotic systems at Tetra Bionics, and work on projects across the full stack — from microcontrollers to dashboards.</p>
+          <p>Outside the lab, I contribute to <strong>NSBE</strong>, research assitive aids and devices at Tetra Design Team, and work on projects across the full stack — from microcontrollers to dashboards.</p>
         </div>
         <div class="stat-grid reveal reveal-delay-3">
           <div class="stat-card">
@@ -121,9 +121,9 @@
       <div class="skill-group reveal reveal-delay-1">
         <p class="skill-group-label">— Programming Languages</p>
         <div class="tags">
-          <span class="tag tag-i">C</span>
-          <span class="tag tag-i">C++</span>
           <span class="tag tag-i">Python</span>
+          <span class="tag tag-i">SQL</span>
+          <span class="tag tag-i">C</span>
           <span class="tag tag-i">Java</span>
           <span class="tag tag-i">MATLAB</span>
           <span class="tag tag-i">VHDL</span>
@@ -156,7 +156,7 @@
           <span class="tag tag-p">Altium Designer</span>
           <span class="tag tag-p">Simulink</span>
           <span class="tag tag-p">OnShape</span>
-          <span class="tag tag-p">SolidWorks</span>
+          <span class="tag tag-p">KiCad</span>
         </div>
       </div>
 
@@ -171,6 +171,7 @@
           <span class="tag tag-pk">MySQL</span>
           <span class="tag tag-pk">TensorFlow.js</span>
           <span class="tag tag-pk">scikit-learn</span>
+          <span class="tag tag-pk">VsCode</span>
           <span class="tag tag-pk">Git</span>
         </div>
       </div>
@@ -186,92 +187,216 @@
       <h2 class="section-title reveal reveal-delay-1">Selected Projects</h2>
 
       <!-- Featured tier -->
-      <div class="featured-label reveal reveal-delay-2">Featured</div>
+      <div class="featured-label reveal reveal-delay-2">★ Featured</div>
       <div class="featured-grid">
-
+ 
+        <!-- Global Unicorn — most technically complete data project -->
         <div class="featured-card featured-main reveal reveal-delay-1">
-          <div class="featured-top">
-            <span class="featured-icon">⚙️</span>
-            <div class="featured-badges">
-              <span class="card-badge b-team">Team</span>
-              <span class="card-badge b-sky">Full-Stack</span>
+          <!--div class="card-img-wrap card-img-wrap--featured"-->
+            <!--img src="DashBoardLinkToBeUpdated" alt="Global Unicorn Tableau dashboard" class="card-img" loading="lazy"/-->
+          <!--/div-->
+          <div class="featured-body">
+            <div class="featured-top">
+              <span class="featured-icon">🦄</span>
+              <div class="featured-badges">
+                <span class="card-badge b-solo">Solo</span>
+              </div>
             </div>
-          </div>
-          <h3 class="featured-title">Multi-Provider LLM Framework</h3>
-          <p class="featured-desc">Built a full-stack AI code review platform integrating GPT-4 with a Flask backend and Firebase database. Designed modular AI pipelines for logic, security, and test coverage analysis — surfacing feedback in real time via a React dashboard. Implemented multi-provider API routing to improve response accuracy and resilience.</p>
-          <div class="featured-footer">
-            <div class="featured-chips">
-              <span class="chip">Flask</span><span class="chip">React</span><span class="chip">Firebase</span><span class="chip">GPT-4</span><span class="chip">OpenAI API</span>
+            <h3 class="featured-title">Global Unicorn Landscape</h3>
+            <p class="featured-desc">End-to-end data science pipeline analysing 1,074 unicorn companies across 46 countries. Built XGBoost valuation model (R²=0.978), binary classifier with ROC-AUC of 1.0, K-Means clustering with PCA, and a 3-year Prophet forecast. Automated styled Excel reports, pushed live data to Google Sheets via API, and published an interactive Tableau dark-mode dashboard.</p>
+            <div class="featured-footer">
+              <div class="featured-chips">
+                <span class="chip">Python</span><span class="chip">XGBoost</span><span class="chip">Prophet</span><span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Google Sheets API</span>
+              </div>
+              <div class="card-links">
+                <a href="LinkToBeUpdated" class="card-link" target="_blank" rel="noopener">GitHubLinkToBeUpdated</a>
+              </div>
             </div>
           </div>
         </div>
-
+ 
+        <!-- FairLend — hackathon, fairness angle, strong story -->
         <div class="featured-card reveal reveal-delay-2">
-          <div class="featured-top">
-            <span class="featured-icon">🔒</span>
-            <div class="featured-badges"><span class="card-badge b-hack">Hackathon</span></div>
-          </div>
-          <h3 class="featured-title">TrancheGuard</h3>
-          <p class="featured-desc">Co-built a full-stack escrow simulation platform with role-separated access for Donors, Contractors, and Auditors; designed enforced business rules preventing fund disbursement without independent audit sign-off. </p>
-          <div class="featured-footer">
-            <div class="featured-chips">
-              <span class="chip">React</span><span class="chip">XRPL</span><span class="chip">Escrow Logic</span>
+          <!--div class="card-img-wrap card-img-wrap--featured"-->
+            <!--img src="DashBoardLinkToBeUpdated" alt="FairLend Tableau dashboard" class="card-img" loading="lazy"/ -->
+          <!--/div -->
+          <div class="featured-body">
+            <div class="featured-top">
+              <span class="featured-icon">⚖️</span>
+              <div class="featured-badges">
+                <span class="card-badge b-hack">Hackathon</span>
+                <span class="card-badge b-data">In Progress</span>
+              </div>
+            </div>
+            <h3 class="featured-title">FairLend</h3>
+            <p class="featured-desc">Microfinance default risk model built on 1.4M real Kiva loans across 80+ countries for IBM × UNSA Hackathon 2026. Random Forest classifier (AUC-ROC 0.81) with gender-disaggregated fairness evaluation. Found women repay at 96.8% vs 94.4% yet receive $179 less per loan — surfacing systemic bias to judges from Google, Amazon, and IBM.</p>
+            <div class="featured-footer">
+              <div class="featured-chips">
+                <span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">SQL</span><span class="chip">Plotly</span><span class="chip">Tableau</span>
+              </div>
+              <div class="card-links">
+                <a href="LinkToBeUpdated" class="card-link" target="_blank" rel="noopener">GitHubLinkToBeUpdated</a>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="featured-card coming-soon reveal reveal-delay-3">
-          <div class="featured-top">
-            <span class="featured-icon">🔬</span>
-            <div class="featured-badges"><span class="card-badge b-acad">Academic</span></div>
-          </div>
-          <div class="coming-soon-badge">In Progress</div>
-          <h3 class="featured-title">VHDL CPU Design</h3>
-          <p class="featured-desc">Full custom CPU implementation in VHDL — ALU, register file, control unit, and instruction pipeline on DE1-SoC FPGA. Verified via waveform simulation in Quartus.</p>
-          <div class="progress-bar-wrap">
-            <div class="progress-label"><span>Build progress</span><span class="progress-pct">65%</span></div>
-            <div class="progress-bar"><div class="progress-fill"></div></div>
+ 
+        <!-- Walking Steps Tracker — full-stack + LLM agent, in progress -->
+        <div class="featured-card featured-card--wip reveal reveal-delay-3">
+          <div class="featured-body">
+            <div class="featured-top">
+              <span class="featured-icon">👟</span>
+              <div class="featured-badges">
+                <span class="card-badge b-solo">Solo</span>
+                <span class="card-badge b-wip">In Progress</span>
+              </div>
+            </div>
+            <h3 class="featured-title">Walking Steps Tracker</h3>
+            <p class="featured-desc">Full-stack mobile + backend analytics system: React Native (Expo) iOS app with live CoreMotion pedometer integration, Python FastAPI backend on Railway via Docker, and a LangGraph ReAct agent (APEX) that autonomously selects analyses before generating personalised coaching. LangSmith observability tracks token usage, latency, and tool-call sequences per run.</p>
+            <div class="featured-footer">
+              <div class="featured-chips">
+                <span class="chip">React Native</span><span class="chip">FastAPI</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">SQLite</span><span class="chip">Docker</span>
+              </div>
+              <div class="card-links">
+                <a href="LinkToBeUpdated" class="card-link" target="_blank" rel="noopener">GitHubLinkToBeUpdated</a>
+              </div>
+            </div>
           </div>
         </div>
+ 
       </div>
+ 
 
       <!-- Standard grid -->
       <div class="grid-label reveal">More Projects</div>
       <div class="projects-grid">
 
+        <!-- TrancheGuard -->
         <div class="project-card reveal reveal-delay-1">
-          <div class="card-top"><span class="card-icon">🕹️</span><span class="card-badge b-solo">Solo</span></div>
-          <h3 class="card-title">Gesture Browser Game</h3>
-          <p class="card-desc">ML-powered game using TensorFlow.js pose estimation. Built full evaluation dashboard with confusion matrix, per-class precision/recall, and confidence visualizations.</p>
-          <div class="card-chips"><span class="chip">TensorFlow.js</span><span class="chip">HTML</span><span class="chip">Pose Estimation</span></div>
+          <div class="card-top"><span class="card-icon">🔒</span><span class="card-badge b-hack">Hackathon</span></div>
+          <h3 class="card-title">TrancheGuard</h3>
+          <p class="card-desc">Milestone-based escrow platform with role-separated donor/contractor/auditor workflows, append-only audit trails, and XRPL blockchain integration addressing systemic funding opacity.</p>
+          <div class="card-chips"><span class="chip">React</span><span class="chip">XRPL</span><span class="chip">Escrow Logic</span></div>
+          <div class="card-links card-links--bottom">
+            <a href="LinkToBeUpdated" class="card-link" target="_blank" rel="noopener">GitHubLinkToBeUpdated</a>
+          </div>
         </div>
 
+        <!-- LLM Framework, MAY REMOVE -->
         <div class="project-card reveal reveal-delay-2">
-          <div class="card-top"><span class="card-icon">🧠</span><span class="card-badge b-acad">Academic</span></div>
-          <h3 class="card-title">Robot Guidance Challenge</h3>
-          <p class="card-desc">Autonomous robot on the Freescale HCS12 microcontroller. Firmware handles motor control, collision detection, and real-time interrupt-driven obstacle avoidance.</p>
-          <div class="card-chips"><span class="chip">HCS12</span><span class="chip">Assembly</span><span class="chip">CodeWarrior</span></div>
+          <div class="card-top"><span class="card-icon">⚙️</span><span class="card-badge b-team">Team</span></div>
+          <h3 class="card-title">Multi-Provider LLM Framework</h3>
+          <p class="card-desc">Full-stack GPT-4 code review platform with Flask/Firebase backend and real-time React dashboard. Modular AI pipelines for logic, security, and test coverage analysis.</p>
+          <div class="card-chips"><span class="chip">Flask</span><span class="chip">React</span><span class="chip">Firebase</span><span class="chip">GPT-4</span></div>
+          <div class="card-links card-links--bottom">
+            <a href="LinkToBeUpdated" class="card-link" target="_blank" rel="noopener">GitHubLinkToBeUpdated</a>
+          </div>
         </div>
 
+        <!-- Parcel Delivery — in progress, no image -->
+        <div class="project-card project-card--wip reveal reveal-delay-3">
+          <div class="card-top">
+            <span class="card-icon">📦</span>
+            <div style="display:flex;gap:0.4rem;">
+              <span class="card-badge b-solo">Solo</span>
+              <span class="card-badge b-wip">In Progress</span> <!--remove when completed-->
+            </div>
+          </div>
+          <h3 class="card-title">Parcel Delivery ETA & Delay Risk</h3>
+          <p class="card-desc">ML system predicting parcel delivery ETAs and delay risk using Gradient Boosting. SHAP-based model interpretation surfaces delay patterns by shift, weather, and route. Deployed as a Streamlit app with modular pipeline architecture.</p>
+          <div class="card-chips"><span class="chip">Python</span><span class="chip">Gradient Boosting</span><span class="chip">SHAP</span><span class="chip">Streamlit</span></div>
+          <div class="card-links card-links--bottom">
+            <a href="LinkToBeUpdated" class="card-link" target="_blank" rel="noopener">GitHubLinkToBeUpdated</a>
+          </div>
+        </div>
+
+        <!-- Canadian Economic Indicators -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="card-top"><span class="card-icon">📈</span>
+            <div style="display:flex;gap:0.4rem;">
+              <span class="card-badge b-solo">Academic</span>
+            </div>
+          </div>
+          <h3 class="card-title">Canadian Economic Indicators</h3>
+          <p class="card-desc">Analysed 10 years of unemployment, GDP, and inflation data from Statistics Canada. Computed correlation coefficients (r = −0.57 to 0.77), identified COVID-19 as a statistical outlier, and modelled recovery trends via interpolation.</p>
+          <div class="card-chips"><span class="chip">Excel</span><span class="chip">Statistics</span><span class="chip">Data Management</span></div>
+        </div>
+
+        <!-- Robot Guidance — carousel -->
+        <div class="project-card project-card--carousel reveal reveal-delay-2">
+          <div class="card-carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="LinkToBeUpdated" alt="Robot navigating maze" class="carousel-img" loading="lazy"/>
+              <img src="LinkToBeUpdated" alt="Robot course overview" class="carousel-img" loading="lazy"/>
+              <img src="LinkToBeUpdated" alt="HCS12 firmware and wiring" class="carousel-img" loading="lazy"/>
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-icon">🧠</span><span class="card-badge b-acad">Academic</span></div>
+            <h3 class="card-title">Robot Guidance Challenge</h3>
+            <p class="card-desc">Autonomous HCS12 robot with firmware for motor control, collision detection, and interrupt-driven obstacle avoidance through a physical maze course.</p>
+            <div class="card-chips"><span class="chip">HCS12</span><span class="chip">Assembly</span><span class="chip">Microcontroller</span></div>
+          </div>
+        </div>
+
+        <!-- Sales Dashboard — image -->
+        <div class="project-card project-card--img reveal reveal-delay-3">
+          <div class="card-img-wrap">
+            <img src="Pictures/SalesDashboard.jpg" alt="Sales performance Tableau dashboard" class="card-img" loading="lazy"/>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-icon">📊</span><span class="card-badge b-solo">Solo</span></div>
+            <h3 class="card-title">Sales Performance Dashboard</h3>
+            <p class="card-desc">Tableau dashboard visualizing $2.33M in sales across 17 categories, 4 shipment methods, and 3 customer segments (2021–2025). Dynamic geographic filtering across all 50 US states and Canadian provinces.</p>
+            <div class="card-chips"><span class="chip">Tableau</span><span class="chip">Power BI</span><span class="chip">SQL</span></div>
+          </div>
+        </div>
+ 
+        <!-- Gesture Game — image -->
+        <div class="project-card project-card--img reveal reveal-delay-1">
+          <div class="card-img-wrap">
+            <img src="Pictures/GestureModel.png" alt="Gesture game evaluation dashboard" class="card-img" loading="lazy"/>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-icon">🕹️</span><span class="card-badge b-solo">Solo</span></div>
+            <h3 class="card-title">Gesture Browser Game</h3>
+            <p class="card-desc">ML-powered game using TensorFlow.js pose estimation. Full evaluation dashboard with confusion matrix, per-class precision/recall, and confidence visualizations.</p>
+            <div class="card-chips"><span class="chip">TensorFlow.js</span><span class="chip">JavaScript</span><span class="chip">Pose Estimation</span></div>
+          </div>
+        </div>
+
+        <!-- House Price Prediction -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="card-top"><span class="card-icon">🤖</span><span class="card-badge b-team">SOLO</span></div>
+          <h3 class="card-title">House Price Prediction</h3>
+          <p class="card-desc">Linear regression model predicting house prices from square footage using scikit-learn. Preprocessed real estate data with Pandas/NumPy and visualized distributions and regression results with Matplotlib.</p>
+          <div class="card-chips"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span></div>
+          <div class="card-links card-links--bottom">
+            <a href="LinkToBeUpdated" class="card-link" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+ 
+        <!-- Alexa Hospital Bed -->
         <div class="project-card reveal reveal-delay-3">
-          <div class="card-top"><span class="card-icon">📈🔎</span><span class="card-badge b-acad">Academic</span></div>
-          <h3 class="card-title">Canadian Economic Indicators Analysis</h3>
-          <p class="card-desc">Sourced data from Statistics Canada and analyzed 10 years of Canadian unemployment, GDP, and inflation — computing correlation coefficients (r = -0.57 to r = 0.77), linear regression equations, and central tendency measures across 3 economic variables using Excel.</p>
-          <div class="card-chips"><span class="chip">Excel</span><span class="chip">PowerPoint</span><span class="chip">Statistics Canada</span></div>
+          <div class="card-top"><span class="card-icon">🤖</span><span class="card-badge b-team">Team</span></div>
+          <h3 class="card-title">Alexa Hospital Bed</h3>
+          <p class="card-desc">ESP32 firmware with Alexa voice control, PWM motor actuation, limit-switch safety logic, MQTT messaging, and AWS Lambda cloud integration for real-time embedded-cloud communication.</p>
+          <div class="card-chips"><span class="chip">ESP32</span><span class="chip">C++</span><span class="chip">AWS Lambda</span><span class="chip">MQTT</span></div>
         </div>
-
+ 
+        <!-- CPU Simulation -->
         <div class="project-card reveal reveal-delay-1">
-          <div class="card-top"><span class="card-icon">📡</span><span class="card-badge b-solo">Solo</span></div>
-          <h3 class="card-title">ROS2 Publisher–Subscriber</h3>
-          <p class="card-desc">ROS2 nodes on Ubuntu simulating real-time distributed robotic communication — topic publishing, callback mechanisms, and inter-node middleware protocols.</p>
-          <div class="card-chips"><span class="chip">ROS2</span><span class="chip">Python</span><span class="chip">Ubuntu</span></div>
-        </div>
-
-        <div class="project-card reveal reveal-delay-2">
-          <div class="card-top"><span class="card-icon">📊</span><span class="card-badge b-solo">Solo</span></div>
-          <h3 class="card-title">Sales Performance Dashboard</h3>
-          <p class="card-desc">Interactive dashboards visualizing 20 years of store sales data in Power BI and Tableau. Highlights long-term trends and KPIs for executive decision-making.</p>
-          <div class="card-chips"><span class="chip">Tableau</span><span class="chip">Data Visualization</span></div>
+          <div class="card-top"><span class="card-icon">💻</span><span class="card-badge b-acad">Academic</span></div>
+          <h3 class="card-title">CPU Simulation (Logic Gates)</h3>
+          <p class="card-desc">Basic CPU with ALU, registers, and control logic designed in Quartus using VHDL. Verified through waveform analysis and logical timing visualization on DE1-SoC FPGA.</p>
+          <div class="card-chips"><span class="chip">Quartus</span><span class="chip">VHDL</span><span class="chip">FPGA</span></div>
         </div>
 
         <div class="project-card reveal reveal-delay-3">
