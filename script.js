@@ -140,13 +140,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typingTarget) {
     const phrases = [
       'data analytics pipelines',
-      'embedded firmware',
+      'ML models that explain themselves',
       'interactive dashboards',
-      'FPGA systems',
-      'full-stack platforms',
-      'ML models',
-      'real-time systems',
-      'PCB circuits',
+      'full-stack applications',
+      'embedded firmware',
+      'end-to-end data systems',
+      'real-time IoT platforms',
+      'fairness-aware ML',
     ];
 
     let phraseIndex = 0;
