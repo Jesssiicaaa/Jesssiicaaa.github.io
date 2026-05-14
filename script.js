@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let W, H, pts;
 
     const COLOURS = ['#6366F1', '#22D3EE', '#A78BFA', '#818cf8', '#f72585'];
-    const COUNT   = 65;
+    const COUNT = window.innerWidth < 768 ? 35 : 65;
     const LINK_DIST = 100;
 
     function resizeCanvas() {
@@ -304,14 +304,141 @@ document.addEventListener('DOMContentLoaded', () => {
     dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
 
     // Auto-advance, pause on hover
-    let timer = setInterval(() => goTo(current + 1), 3500);
+    let timer = setInterval(() => goTo(current + 1), 5000);
     carousel.addEventListener('mouseenter', () => clearInterval(timer));
     carousel.addEventListener('mouseleave', () => {
-      timer = setInterval(() => goTo(current + 1), 3500);
+      timer = setInterval(() => goTo(current + 1), 5000);
     });
   });
 
+/* ─────────────────────────────
+   IMAGE MODAL
+───────────────────────────── */
 
+const imageModal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const modalClose = document.getElementById("modalClose");
+const modalPrev = document.getElementById("modalPrev");
+const modalNext = document.getElementById("modalNext");
+const modalCounter = document.getElementById("modalCounter");
+const modalCaption = document.getElementById("modalCaption");
+
+let modalImages = [];
+let currentModalIndex = 0;
+
+document.querySelectorAll("[data-carousel]").forEach(carousel => {
+
+  const images = carousel.querySelectorAll(".carousel-img");
+
+  images.forEach((img, index) => {
+
+    img.addEventListener("click", () => {
+
+      modalImages = [...images];
+      currentModalIndex = index;
+
+      openModal();
+    });
+
+  });
+
+});
+
+function openModal(){
+
+  updateModal();
+
+  imageModal.classList.add("active");
+  document.body.classList.add("modal-open");
+}
+
+function closeModal(){
+
+  imageModal.classList.remove("active");
+  document.body.classList.remove("modal-open");
+
+}
+
+
+function updateModal(){
+
+  const currentImg = modalImages[currentModalIndex];
+
+  modalImg.src = currentImg.src;
+
+  modalCounter.textContent =
+    `${currentModalIndex + 1} / ${modalImages.length}`;
+
+  modalCaption.textContent =
+    currentImg.dataset.caption || currentImg.alt;
+}
+
+function nextModalImage(){
+
+  currentModalIndex =
+    (currentModalIndex + 1) % modalImages.length;
+
+  updateModal();
+}
+
+function prevModalImage(){
+
+  currentModalIndex =
+    (currentModalIndex - 1 + modalImages.length)
+    % modalImages.length;
+
+  updateModal();
+}
+
+modalNext.addEventListener("click", nextModalImage);
+modalPrev.addEventListener("click", prevModalImage);
+
+modalClose.addEventListener("click", closeModal);
+
+imageModal.addEventListener("click", (e) => {
+
+  if(
+    e.target.classList.contains("modal-overlay")
+  ){
+    closeModal();
+  }
+});
+
+/* keyboard controls */
+
+document.addEventListener("keydown", (e) => {
+
+  if(!imageModal.classList.contains("active"))
+    return;
+
+  if(e.key === "Escape")
+    closeModal();
+
+  if(e.key === "ArrowRight")
+    nextModalImage();
+
+  if(e.key === "ArrowLeft")
+    prevModalImage();
+});
+
+/* keep custom cursor active inside modal */
+
+imageModal.addEventListener("mousemove", (e) => {
+
+  const cursor = document.getElementById("cursor");
+  const cursorRing = document.getElementById("cursorRing");
+
+  if(cursor){
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+  }
+
+  if(cursorRing){
+    cursorRing.style.left = `${e.clientX}px`;
+    cursorRing.style.top = `${e.clientY}px`;
+  }
+});
+  
   /* ────────────────────────────────────────
      9. LAZY IMAGE FADE-IN
      Fades images in once loaded instead of
