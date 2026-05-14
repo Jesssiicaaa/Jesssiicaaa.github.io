@@ -401,9 +401,16 @@
         </div>
 
         <!-- Sales Dashboard — image -->
-        <div class="project-card project-card--img reveal reveal-delay-3">
-          <div class="card-img-wrap">
-            <img src="Pictures/SalesDashboard.jpg" alt="Sales performance Tableau dashboard" class="card-img" loading="lazy"/>
+        <div class="project-card project-card--carousel reveal reveal-delay-2">
+          <div class="card-carousel" data-carousel>
+            <div class="carousel-track">
+            <img src="Pictures/SalesDashboard.jpg" alt="Sales performance Tableau dashboard" class="carousel-img" loading="lazy"/>
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+            </div>
           </div>
           <div class="card-body">
             <div class="card-top"><span class="card-icon">📊</span><span class="card-badge b-solo">Solo</span></div>
